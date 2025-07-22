@@ -28,7 +28,17 @@ const About = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.2 }}
+                            className='relative'
                         >
+                            <div className='mb-6 relative max-w-xs mx-auto md:mx-0'>
+                                <div className='absolute -top-3 -left-3 w-24 h-24 border-t-2 border-l-2 border-primary'></div>
+                                <img
+                                    src='/images/foto.png'
+                                    alt='Miguel Vega Molina'
+                                    className='w-full rounded-lg shadow-lg'
+                                />
+                                <div className='absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-primary'></div>
+                            </div>
                             <p className='text-lg mb-6 text-gray-300'>
                                 Soy un Ingeniero informático en Sistemas de
                                 Información con experiencia en desarrollo de

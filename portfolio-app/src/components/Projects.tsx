@@ -27,13 +27,13 @@ const Projects = () => {
             futureFeatures: [
                 'Panel administrativo con estadísticas en tiempo real',
                 'Integración con pasarelas de pago (Stripe, PayPal)',
-                'Sistema de notificaciones por email y SMS',
-                'Módulo de reseñas y valoraciones',
+                'Sistema de notificaciones por email',
+                'Módulo de valoraciones',
                 'Gestión de descuentos y cupones',
                 'Integración con servicios de envío y seguimiento en tiempo real',
             ],
-            githubUrl: 'https://github.com/yourusername/vapexpress',
-            liveUrl: 'https://vapexpress-demo.example.com',
+            githubUrl: 'https://github.com/mvegmol/VapexpressLaravel',
+            // liveUrl: 'https://vapexpress-demo.example.com',
         },
         // You can add more projects here
     ];
@@ -71,7 +71,7 @@ const Projects = () => {
                             ¿Quieres ver más de mis proyectos?
                         </p>
                         <a
-                            href='https://github.com/yourusername'
+                            href='https://github.com/mvegmol'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white py-3 px-8 rounded-md transition-colors'

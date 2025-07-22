@@ -18,7 +18,7 @@ const Footer = () => {
 
                     <div className='flex items-center space-x-6 mb-4 md:mb-0'>
                         <a
-                            href='https://github.com/yourusername'
+                            href='https://github.com/mvegmol'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='text-gray-400 hover:text-primary transition-colors text-xl'
@@ -27,7 +27,7 @@ const Footer = () => {
                             <FiGithub />
                         </a>
                         <a
-                            href='https://linkedin.com/in/yourlinkedin'
+                            href='https://www.linkedin.com/in/miguel-vega-molina-4410b6257'
                             target='_blank'
                             rel='noopener noreferrer'
                             className='text-gray-400 hover:text-primary transition-colors text-xl'
