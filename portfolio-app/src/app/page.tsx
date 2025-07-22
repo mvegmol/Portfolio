@@ -10,16 +10,16 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  return (
-    <div className="min-h-screen font-sans">
-      <Header />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='min-h-screen font-sans'>
+            <Header />
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Contact />
+            <Footer />
+        </div>
+    );
 }

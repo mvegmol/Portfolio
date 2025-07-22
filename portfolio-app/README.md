@@ -4,30 +4,30 @@ Este es un portfolio personal desarrollado con Next.js 15, React y TailwindCSS, 
 
 ## Características
 
-- Diseño moderno y responsive
-- Animaciones fluidas con Framer Motion
-- Formulario de contacto funcional con EmailJS
-- Secciones personalizables
-- Optimizado para SEO
-- Rendimiento óptimo
+-   Diseño moderno y responsive
+-   Animaciones fluidas con Framer Motion
+-   Formulario de contacto funcional con EmailJS
+-   Secciones personalizables
+-   Optimizado para SEO
+-   Rendimiento óptimo
 
 ## Secciones
 
-- **Hero** - Presentación personal con información de contacto
-- **Sobre Mí** - Información detallada sobre mi perfil profesional
-- **Experiencia** - Historial laboral y educación
-- **Proyectos** - Showcase de proyectos destacados
-- **Habilidades** - Conocimientos técnicos organizados por categorías
-- **Contacto** - Formulario de contacto y datos personales
+-   **Hero** - Presentación personal con información de contacto
+-   **Sobre Mí** - Información detallada sobre mi perfil profesional
+-   **Experiencia** - Historial laboral y educación
+-   **Proyectos** - Showcase de proyectos destacados
+-   **Habilidades** - Conocimientos técnicos organizados por categorías
+-   **Contacto** - Formulario de contacto y datos personales
 
 ## Tecnologías Utilizadas
 
-- Next.js 15
-- React 19
-- TailwindCSS 4
-- Framer Motion
-- EmailJS
-- React Icons
+-   Next.js 15
+-   React 19
+-   TailwindCSS 4
+-   Framer Motion
+-   EmailJS
+-   React Icons
 
 ## Configuración del Formulario de Contacto
 

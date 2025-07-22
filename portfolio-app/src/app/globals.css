@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
-    --primary: #2563eb;
-    --primary-dark: #1d4ed8;
-    --primary-light: #3b82f6;
-    --primary-lighter: #93c5fd;
-    --secondary: #4b5563;
+    --background: #121212;
+    --foreground: #e0e0e0;
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --primary-light: #6366f1;
+    --primary-lighter: #818cf8;
+    --secondary: #9ca3af;
 }
 
 @theme inline {
@@ -30,9 +30,15 @@ body {
 
 /* Custom animations */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .animate-float {
@@ -45,7 +51,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #1e1e1e;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,7 +68,7 @@ body {
     position: relative;
     height: 8px;
     border-radius: 4px;
-    background: #e2e8f0;
+    background: #2d2d2d;
     overflow: hidden;
 }
 
