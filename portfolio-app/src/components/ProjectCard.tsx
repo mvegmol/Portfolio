@@ -29,9 +29,9 @@ interface ProjectProps {
 }
 
 const ProjectCard = ({ project, index }: ProjectProps) => {
-    const [showDetails, setShowDetails] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [showModal, setShowModal] = useState(false);
+    const [showImageModal, setShowImageModal] = useState(false);
+    const [showDetailsModal, setShowDetailsModal] = useState(false);
 
     const images = project.images || [project.image];
     const hasMultipleImages = images.length > 1;
@@ -46,12 +46,20 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
         );
     };
 
-    const openModal = () => {
-        setShowModal(true);
+    const openImageModal = () => {
+        setShowImageModal(true);
     };
 
-    const closeModal = () => {
-        setShowModal(false);
+    const closeImageModal = () => {
+        setShowImageModal(false);
+    };
+
+    const openDetailsModal = () => {
+        setShowDetailsModal(true);
+    };
+
+    const closeDetailsModal = () => {
+        setShowDetailsModal(false);
     };
 
     return (
@@ -75,7 +83,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                     fill
                                     style={{ objectFit: 'cover' }}
                                     className='transition-transform duration-300 hover:scale-105 cursor-pointer'
-                                    onClick={openModal}
+                                    onClick={openImageModal}
                                 />
 
                                 {/* Carrusel de navegación */}
@@ -185,66 +193,160 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                     </div>
 
                     <button
-                        onClick={() => setShowDetails(!showDetails)}
-                        className='flex items-center gap-2 text-primary hover:text-primary-light transition-colors w-full justify-center'
+                        onClick={openDetailsModal}
+                        className='flex items-center gap-2 text-primary hover:text-primary-light transition-colors w-full justify-center bg-[#333333] py-3 rounded-lg hover:bg-[#404040]'
                     >
-                        {showDetails ? (
-                            <>
-                                Ocultar detalles <FiChevronUp />
-                            </>
-                        ) : (
-                            <>
-                                Ver detalles <FiChevronDown />
-                            </>
-                        )}
+                        Ver detalles completos <FiExternalLink />
                     </button>
 
-                    {showDetails && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className='mt-4 pt-4 border-t border-gray-700'
-                        >
-                            <h4 className='font-medium mb-2 text-gray-200'>
-                                Características:
-                            </h4>
-                            <ul className='list-disc pl-5 mb-4 space-y-1 text-gray-300'>
-                                {project.features.map((feature, idx) => (
-                                    <li key={idx}>{feature}</li>
-                                ))}
-                            </ul>
-
-                            {project.futureFeatures &&
-                                project.futureFeatures.length > 0 && (
-                                    <>
-                                        <h4 className='font-medium mb-2 text-gray-200'>
-                                            Futuras implementaciones:
-                                        </h4>
-                                        <ul className='list-disc pl-5 space-y-1 text-gray-300'>
-                                            {project.futureFeatures.map(
-                                                (feature, idx) => (
-                                                    <li key={idx}>{feature}</li>
-                                                )
-                                            )}
-                                        </ul>
-                                    </>
-                                )}
-                        </motion.div>
-                    )}
                 </div>
             </motion.div>
 
+            {/* Modal para ver detalles completos del proyecto */}
+            <AnimatePresence>
+                {showDetailsModal && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className='fixed inset-0 z-[9998] flex items-center justify-center bg-black/90 p-4'
+                        onClick={closeDetailsModal}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            className='relative max-w-4xl max-h-[90vh] w-full bg-[#242424] rounded-lg overflow-hidden'
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            {/* Botón cerrar */}
+                            <button
+                                onClick={closeDetailsModal}
+                                className='absolute top-4 right-4 z-10 bg-black/70 text-white p-3 rounded-full hover:bg-black/90 transition-colors shadow-lg'
+                            >
+                                <FiX size={20} />
+                            </button>
+
+                            {/* Contenido del modal */}
+                            <div className='p-6 overflow-y-auto max-h-[90vh]'>
+                                {/* Header del proyecto */}
+                                <div className='mb-6'>
+                                    <h2 className='text-3xl font-bold mb-2'>{project.title}</h2>
+                                    <div className='flex items-center gap-4 mb-4'>
+                                        <div className='flex items-center gap-2 text-primary'>
+                                            <FiClock />
+                                            <span>{project.period}</span>
+                                        </div>
+                                        <div className='flex gap-3'>
+                                            {project.githubUrl && (
+                                                <a
+                                                    href={project.githubUrl}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    className='flex items-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors'
+                                                >
+                                                    <FiGithub /> GitHub
+                                                </a>
+                                            )}
+                                            {project.liveUrl && (
+                                                <a
+                                                    href={project.liveUrl}
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    className='flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-colors'
+                                                >
+                                                    <FiExternalLink /> Demo
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <p className='text-gray-300 text-lg leading-relaxed'>{project.description}</p>
+                                </div>
+
+                                {/* Galería de imágenes */}
+                                {images.length > 0 && (
+                                    <div className='mb-6'>
+                                        <h3 className='text-xl font-semibold mb-4'>Capturas del proyecto</h3>
+                                        <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+                                            {images.map((img, idx) => (
+                                                <div 
+                                                    key={idx} 
+                                                    className='relative aspect-video bg-gray-700 rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform'
+                                                    onClick={() => {
+                                                        setCurrentImageIndex(idx);
+                                                        openImageModal();
+                                                    }}
+                                                >
+                                                    <Image
+                                                        src={img}
+                                                        alt={`${project.title} - Captura ${idx + 1}`}
+                                                        fill
+                                                        style={{ objectFit: 'cover' }}
+                                                        className='rounded-lg'
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+                                {/* Tecnologías */}
+                                <div className='mb-6'>
+                                    <h3 className='text-xl font-semibold mb-4'>Tecnologías utilizadas</h3>
+                                    <div className='flex flex-wrap gap-3'>
+                                        {project.technologies.map((tech, idx) => (
+                                            <span
+                                                key={idx}
+                                                className='bg-[#333333] text-primary-light px-4 py-2 rounded-full text-sm font-medium'
+                                            >
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Características */}
+                                <div className='mb-6'>
+                                    <h3 className='text-xl font-semibold mb-4'>Características principales</h3>
+                                    <div className='grid md:grid-cols-2 gap-4'>
+                                        {project.features.map((feature, idx) => (
+                                            <div key={idx} className='flex items-start gap-3 bg-[#333333] p-3 rounded-lg'>
+                                                <div className='w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0'></div>
+                                                <span className='text-gray-300'>{feature}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {/* Futuras implementaciones */}
+                                {project.futureFeatures && project.futureFeatures.length > 0 && (
+                                    <div className='mb-6'>
+                                        <h3 className='text-xl font-semibold mb-4'>Futuras implementaciones</h3>
+                                        <div className='grid md:grid-cols-2 gap-4'>
+                                            {project.futureFeatures.map((feature, idx) => (
+                                                <div key={idx} className='flex items-start gap-3 bg-[#2a2a2a] p-3 rounded-lg border border-primary/20'>
+                                                    <div className='w-2 h-2 rounded-full bg-primary/60 mt-2 flex-shrink-0'></div>
+                                                    <span className='text-gray-400'>{feature}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* Modal para ver imagen completa */}
             <AnimatePresence>
-                {showModal && (
+                {showImageModal && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         className='fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-4'
-                        onClick={closeModal}
+                        onClick={closeImageModal}
                         style={{ position: 'fixed' }}
                     >
                         <motion.div
@@ -256,7 +358,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                         >
                             {/* Botón cerrar */}
                             <button
-                                onClick={closeModal}
+                                onClick={closeImageModal}
                                 className='absolute top-4 right-4 z-10 bg-black/70 text-white p-3 rounded-full hover:bg-black/90 transition-colors shadow-lg'
                             >
                                 <FiX size={20} />
