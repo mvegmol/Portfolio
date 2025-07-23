@@ -8,7 +8,13 @@ const Projects = () => {
             title: 'Vapexpress',
             description:
                 'Sistema de información especializado en la venta de vapers y productos relacionados. Optimiza la experiencia de compra en línea con gestión eficiente y segura para clientes y tiendas.',
-            image: '/project-vapexpress.jpg',
+            image: '/images/vapexpress/Bienvenida.png',
+            images: [
+                '/images/vapexpress/Bienvenida.png',
+                '/images/vapexpress/producto.png',
+                '/images/vapexpress/carrito.png',
+                '/images/vapexpress/favoritos.png',
+            ],
             period: 'Abril 2024 - Septiembre 2024',
             technologies: [
                 'Laravel 10',
@@ -23,14 +29,20 @@ const Projects = () => {
                 'Listas de favoritos',
                 'Interfaz moderna adaptable a múltiples dispositivos',
                 'Automatización de procesos clave',
-            ],
-            futureFeatures: [
                 'Panel administrativo con estadísticas en tiempo real',
                 'Integración con pasarelas de pago (Stripe, PayPal)',
                 'Sistema de notificaciones por email',
                 'Módulo de valoraciones',
                 'Gestión de descuentos y cupones',
                 'Integración con servicios de envío y seguimiento en tiempo real',
+            ],
+            futureFeatures: [
+                'Internacionalización: Soporte para múltiples idiomas y monedas',
+                'Optimización del rendimiento para cargas de trabajo intensas',
+                'Sistema de recomendación de productos basado en comportamiento de usuarios',
+                'Integración de análisis de datos avanzado para informes detallados',
+                'Mejoras de usabilidad basadas en pruebas de usuario',
+                'Sistema avanzado de descuentos y promociones para fidelización',
             ],
             githubUrl: 'https://github.com/mvegmol/VapexpressLaravel',
             // liveUrl: 'https://vapexpress-demo.example.com',
