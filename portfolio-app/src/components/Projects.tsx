@@ -101,7 +101,6 @@ const Projects = () => {
                 'Módulo de recursos humanos con control de horarios',
             ],
             githubUrl: 'https://github.com/mvegmol/Tintoreria',
-            // liveUrl: 'https://tintoreria-demo.example.com',
         },
         // You can add more projects here
     ];
@@ -127,26 +126,6 @@ const Projects = () => {
                             />
                         ))}
                     </div>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-100px' }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className='mt-16 text-center'
-                    >
-                        <p className='text-lg mb-6 text-gray-300'>
-                            ¿Quieres ver más de mis proyectos?
-                        </p>
-                        <a
-                            href='https://github.com/mvegmol'
-                            target='_blank'
-                            rel='noopener noreferrer'
-                            className='inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white py-3 px-8 rounded-md transition-colors'
-                        >
-                            <FiGithub /> Visita mi GitHub
-                        </a>
-                    </motion.div>
                 </motion.div>
             </div>
         </section>

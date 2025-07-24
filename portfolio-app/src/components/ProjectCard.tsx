@@ -270,7 +270,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                 {images.length > 0 && (
                                     <div className='mb-6'>
                                         <h3 className='text-xl font-semibold mb-4'>
-                                            Capturas del proyecto
+                                            Imagenes del proyecto
                                         </h3>
                                         <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                                             {images.map((img, idx) => (
@@ -325,21 +325,18 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                     <h3 className='text-xl font-semibold mb-4'>
                                         Características principales
                                     </h3>
-                                    <div className='grid md:grid-cols-2 gap-4'>
+                                    <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
                                         {project.features.map(
                                             (feature, idx) => (
-                                                <div
+                                                <li
                                                     key={idx}
-                                                    className='flex items-start gap-3 bg-[#333333] p-3 rounded-lg'
+                                                    className='leading-relaxed marker:text-primary'
                                                 >
-                                                    <div className='w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0'></div>
-                                                    <span className='text-gray-300'>
-                                                        {feature}
-                                                    </span>
-                                                </div>
+                                                    {feature}
+                                                </li>
                                             )
                                         )}
-                                    </div>
+                                    </ul>
                                 </div>
 
                                 {/* Futuras implementaciones */}
@@ -349,21 +346,18 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                             <h3 className='text-xl font-semibold mb-4'>
                                                 Futuras implementaciones
                                             </h3>
-                                            <div className='grid md:grid-cols-2 gap-4'>
+                                            <ul className='list-disc list-inside space-y-2 text-gray-400 ml-4'>
                                                 {project.futureFeatures.map(
                                                     (feature, idx) => (
-                                                        <div
+                                                        <li
                                                             key={idx}
-                                                            className='flex items-start gap-3 bg-[#2a2a2a] p-3 rounded-lg border border-primary/20'
+                                                            className='leading-relaxed marker:text-primary/60'
                                                         >
-                                                            <div className='w-2 h-2 rounded-full bg-primary/60 mt-2 flex-shrink-0'></div>
-                                                            <span className='text-gray-400'>
-                                                                {feature}
-                                                            </span>
-                                                        </div>
+                                                            {feature}
+                                                        </li>
                                                     )
                                                 )}
-                                            </div>
+                                            </ul>
                                         </div>
                                     )}
                             </div>
