@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="min-h-screen font-sans">
             <Header />
             <Hero />
+            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start p-8">
                 <ol className='font-mono list-inside list-decimal text-sm/6 text-center sm:text-left'>
                     <li className='mb-2 tracking-[-.01em]'>
                         Get started by editing{' '}
