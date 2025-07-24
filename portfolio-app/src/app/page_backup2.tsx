@@ -12,10 +12,10 @@ import Footer from '../components/Footer';
 
 export default function Home() {
     return (
-        <div className="min-h-screen font-sans">
+        <div className='min-h-screen font-sans'>
             <Header />
             <Hero />
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start p-8">
+            <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start p-8'>
                 <ol className='font-mono list-inside list-decimal text-sm/6 text-center sm:text-left'>
                     <li className='mb-2 tracking-[-.01em]'>
                         Get started by editing{' '}
