@@ -21,6 +21,7 @@ import {
     SiGithub,
     SiGitlab,
     SiBitbucket,
+    SiElectron,
 } from 'react-icons/si';
 import { TbServer } from 'react-icons/tb'; // Para WSO2
 import { MdSecurity } from 'react-icons/md'; // Para KeyCloak
@@ -71,10 +72,6 @@ const Skills = () => {
             icon: <SiPostgresql size={40} className='text-[#4169E1]' />,
         },
         {
-            name: 'MongoDB',
-            icon: <SiMongodb size={40} className='text-[#47A248]' />,
-        },
-        {
             name: 'SQLite',
             icon: <SiSqlite size={40} className='text-[#003B57]' />,
         },
@@ -91,25 +88,13 @@ const Skills = () => {
             icon: <SiElasticsearch size={40} className='text-[#005571]' />,
         },
         {
-            name: 'AWS',
-            icon: <SiAmazon size={40} className='text-[#FF9900]' />,
-        },
-        {
             name: 'KeyCloak',
             icon: <MdSecurity size={40} className='text-red-500' />,
         },
         { name: 'Git', icon: <SiGit size={40} className='text-[#F05032]' /> },
         {
-            name: 'GitHub',
-            icon: <SiGithub size={40} className='text-foreground' />,
-        },
-        {
-            name: 'GitLab',
-            icon: <SiGitlab size={40} className='text-[#FCA121]' />,
-        },
-        {
-            name: 'Bitbucket',
-            icon: <SiBitbucket size={40} className='text-[#0052CC]' />,
+            name: 'Electron',
+            icon: <SiElectron size={40} className='text-[#0052CC]' />,
         },
     ];
 

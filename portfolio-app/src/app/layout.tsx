@@ -21,6 +21,11 @@ export const metadata: Metadata = {
         'Ingeniero informático en Sistemas de Información con experiencia en desarrollo de aplicaciones web.',
     keywords:
         'Miguel Vega, desarrollador web, ingeniero informático, portfolio, NTT Data, Django, Laravel, WSO2',
+    icons: {
+        icon: [{ url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' }],
+        shortcut: '/favicon.ico',
+        apple: '/favicon.ico',
+    },
 };
 
 export default function RootLayout({

@@ -344,9 +344,11 @@ const Hero = () => {
                                 <FiArrowDown className='ml-1' />
                             </a>
                             <a
-                                href='/cv.pdf'
+                                href='/CV.pdf'
                                 className='border border-primary text-primary hover:bg-primary/10 py-3 px-8 rounded-md transition-all flex items-center gap-2 font-medium'
                                 target='_blank'
+                                rel='noopener noreferrer'
+                                download='Miguel_Vega_Molina_CV.pdf'
                             >
                                 Descargar CV
                                 <FiDownload className='ml-1' />

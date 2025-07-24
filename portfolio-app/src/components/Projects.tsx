@@ -5,7 +5,7 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 const Projects = () => {
     const projects = [
         {
-            title: 'Vapexpress',
+            title: 'Vapexpress TFG',
             description:
                 'Sistema de información especializado en la venta de vapers y productos relacionados. Optimiza la experiencia de compra en línea con gestión eficiente y segura para clientes y tiendas.',
             image: '/images/vapexpress/Bienvenida.png',
@@ -50,7 +50,7 @@ const Projects = () => {
         {
             title: 'Sistema de Gestión para Tintorería',
             description:
-                'Sistema integral de gestión para tintorerías desarrollado con Electron. Incluye TPV optimizado, gestión completa de clientes, órdenes y empleados, sistema de impresión térmica avanzado, y dashboard en tiempo real con estadísticas detalladas.',
+                'Sistema integral de gestión para tintorerías desarrollado con Electron junto a Carlos Vega Molina. Incluye TPV optimizado, gestión completa de clientes, órdenes y empleados, sistema de impresión térmica avanzado, y dashboard en tiempo real con estadísticas detalladas.',
             image: '/images/tintoreria/dashboard.png',
             images: [
                 '/images/tintoreria/dashboard.png',
@@ -100,7 +100,7 @@ const Projects = () => {
                 'API REST para integraciones con terceros',
                 'Módulo de recursos humanos con control de horarios',
             ],
-            githubUrl: 'https://github.com/mvegmol/Tintoreria',
+            // githubUrl: 'https://github.com/mvegmol/Tintoreria',
         },
         // You can add more projects here
     ];

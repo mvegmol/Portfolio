@@ -12,7 +12,7 @@ const Footer = () => {
                             Miguel<span className='text-primary'>VM</span>
                         </h3>
                         <p className='text-gray-400'>
-                            Desarrollador web &amp; Ingeniero de Sistemas
+                            Ingeniero Informático en Sistemas de Información
                         </p>
                     </div>
 
