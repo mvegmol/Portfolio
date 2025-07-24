@@ -31,18 +31,16 @@ const Contact = () => {
         setIsSubmitting(true);
 
         try {
-            // Replace these values with your actual EmailJS service, template and user IDs
-            // You need to sign up at emailjs.com and set up your email template
             await emailjs.send(
-                'YOUR_SERVICE_ID',
-                'YOUR_TEMPLATE_ID',
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
                 {
                     name: formData.name,
                     email: formData.email,
                     subject: formData.subject,
                     message: formData.message,
                 },
-                'YOUR_USER_ID'
+                process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
             );
 
             setSubmitStatus('success');

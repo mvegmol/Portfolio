@@ -198,7 +198,6 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                     >
                         Ver detalles completos <FiExternalLink />
                     </button>
-
                 </div>
             </motion.div>
 
@@ -217,7 +216,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.8, opacity: 0 }}
                             className='relative max-w-4xl max-h-[90vh] w-full bg-[#242424] rounded-lg overflow-hidden'
-                            onClick={(e) => e.stopPropagation()}
+                            onClick={e => e.stopPropagation()}
                         >
                             {/* Botón cerrar */}
                             <button
@@ -231,7 +230,9 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                             <div className='p-6 overflow-y-auto max-h-[90vh]'>
                                 {/* Header del proyecto */}
                                 <div className='mb-6'>
-                                    <h2 className='text-3xl font-bold mb-2'>{project.title}</h2>
+                                    <h2 className='text-3xl font-bold mb-2'>
+                                        {project.title}
+                                    </h2>
                                     <div className='flex items-center gap-4 mb-4'>
                                         <div className='flex items-center gap-2 text-primary'>
                                             <FiClock />
@@ -260,28 +261,38 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                             )}
                                         </div>
                                     </div>
-                                    <p className='text-gray-300 text-lg leading-relaxed'>{project.description}</p>
+                                    <p className='text-gray-300 text-lg leading-relaxed'>
+                                        {project.description}
+                                    </p>
                                 </div>
 
                                 {/* Galería de imágenes */}
                                 {images.length > 0 && (
                                     <div className='mb-6'>
-                                        <h3 className='text-xl font-semibold mb-4'>Capturas del proyecto</h3>
+                                        <h3 className='text-xl font-semibold mb-4'>
+                                            Capturas del proyecto
+                                        </h3>
                                         <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
                                             {images.map((img, idx) => (
-                                                <div 
-                                                    key={idx} 
+                                                <div
+                                                    key={idx}
                                                     className='relative aspect-video bg-gray-700 rounded-lg overflow-hidden cursor-pointer hover:scale-105 transition-transform'
                                                     onClick={() => {
-                                                        setCurrentImageIndex(idx);
+                                                        setCurrentImageIndex(
+                                                            idx
+                                                        );
                                                         openImageModal();
                                                     }}
                                                 >
                                                     <Image
                                                         src={img}
-                                                        alt={`${project.title} - Captura ${idx + 1}`}
+                                                        alt={`${
+                                                            project.title
+                                                        } - Captura ${idx + 1}`}
                                                         fill
-                                                        style={{ objectFit: 'cover' }}
+                                                        style={{
+                                                            objectFit: 'cover',
+                                                        }}
                                                         className='rounded-lg'
                                                     />
                                                 </div>
@@ -292,46 +303,69 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
 
                                 {/* Tecnologías */}
                                 <div className='mb-6'>
-                                    <h3 className='text-xl font-semibold mb-4'>Tecnologías utilizadas</h3>
+                                    <h3 className='text-xl font-semibold mb-4'>
+                                        Tecnologías utilizadas
+                                    </h3>
                                     <div className='flex flex-wrap gap-3'>
-                                        {project.technologies.map((tech, idx) => (
-                                            <span
-                                                key={idx}
-                                                className='bg-[#333333] text-primary-light px-4 py-2 rounded-full text-sm font-medium'
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
+                                        {project.technologies.map(
+                                            (tech, idx) => (
+                                                <span
+                                                    key={idx}
+                                                    className='bg-[#333333] text-primary-light px-4 py-2 rounded-full text-sm font-medium'
+                                                >
+                                                    {tech}
+                                                </span>
+                                            )
+                                        )}
                                     </div>
                                 </div>
 
                                 {/* Características */}
                                 <div className='mb-6'>
-                                    <h3 className='text-xl font-semibold mb-4'>Características principales</h3>
+                                    <h3 className='text-xl font-semibold mb-4'>
+                                        Características principales
+                                    </h3>
                                     <div className='grid md:grid-cols-2 gap-4'>
-                                        {project.features.map((feature, idx) => (
-                                            <div key={idx} className='flex items-start gap-3 bg-[#333333] p-3 rounded-lg'>
-                                                <div className='w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0'></div>
-                                                <span className='text-gray-300'>{feature}</span>
-                                            </div>
-                                        ))}
+                                        {project.features.map(
+                                            (feature, idx) => (
+                                                <div
+                                                    key={idx}
+                                                    className='flex items-start gap-3 bg-[#333333] p-3 rounded-lg'
+                                                >
+                                                    <div className='w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0'></div>
+                                                    <span className='text-gray-300'>
+                                                        {feature}
+                                                    </span>
+                                                </div>
+                                            )
+                                        )}
                                     </div>
                                 </div>
 
                                 {/* Futuras implementaciones */}
-                                {project.futureFeatures && project.futureFeatures.length > 0 && (
-                                    <div className='mb-6'>
-                                        <h3 className='text-xl font-semibold mb-4'>Futuras implementaciones</h3>
-                                        <div className='grid md:grid-cols-2 gap-4'>
-                                            {project.futureFeatures.map((feature, idx) => (
-                                                <div key={idx} className='flex items-start gap-3 bg-[#2a2a2a] p-3 rounded-lg border border-primary/20'>
-                                                    <div className='w-2 h-2 rounded-full bg-primary/60 mt-2 flex-shrink-0'></div>
-                                                    <span className='text-gray-400'>{feature}</span>
-                                                </div>
-                                            ))}
+                                {project.futureFeatures &&
+                                    project.futureFeatures.length > 0 && (
+                                        <div className='mb-6'>
+                                            <h3 className='text-xl font-semibold mb-4'>
+                                                Futuras implementaciones
+                                            </h3>
+                                            <div className='grid md:grid-cols-2 gap-4'>
+                                                {project.futureFeatures.map(
+                                                    (feature, idx) => (
+                                                        <div
+                                                            key={idx}
+                                                            className='flex items-start gap-3 bg-[#2a2a2a] p-3 rounded-lg border border-primary/20'
+                                                        >
+                                                            <div className='w-2 h-2 rounded-full bg-primary/60 mt-2 flex-shrink-0'></div>
+                                                            <span className='text-gray-400'>
+                                                                {feature}
+                                                            </span>
+                                                        </div>
+                                                    )
+                                                )}
+                                            </div>
                                         </div>
-                                    </div>
-                                )}
+                                    )}
                             </div>
                         </motion.div>
                     </motion.div>
