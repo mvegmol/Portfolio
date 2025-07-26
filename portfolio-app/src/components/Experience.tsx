@@ -22,7 +22,7 @@ const Experience = () => {
             location: 'Dos Hermanas, Sevilla',
             period: 'Abril 2024 - Octubre 2024',
             description: [
-                'Integraciones de backend con WSO2(API Restful & SOAP & Dataservice)',
+                'Integración de servicios backend utilizando WSO2, incluyendo APIs RESTful, servicios SOAP y Data Services.',
                 'Automatizaciones de procesos internos con Django (Jira Internos, horas de cliente)',
                 'Colaboré en la implementación de alertas y monitoreo con Elastic Search.',
             ],
