@@ -1,6 +1,6 @@
 # Miguel Vega Molina - Portfolio Personal
 
-Este es un portfolio personal desarrollado con Next.js 15, React y TailwindCSS, diseñado para mostrar mi experiencia, habilidades y proyectos como desarrollador web.
+Este es un portfolio personal desarrollado con Next.js 15, React y TailwindCSS, diseñado para mostrar mi experiencia, habilidades y proyectos como Ingeniero Informático en Sistemas de Información
 
 ## Características
 
@@ -8,7 +8,6 @@ Este es un portfolio personal desarrollado con Next.js 15, React y TailwindCSS, 
 -   Animaciones fluidas con Framer Motion
 -   Formulario de contacto funcional con EmailJS
 -   Secciones personalizables
--   Optimizado para SEO
 -   Rendimiento óptimo
 
 ## Secciones

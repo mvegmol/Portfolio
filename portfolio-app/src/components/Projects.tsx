@@ -16,6 +16,7 @@ const Projects = () => {
                 '/images/vapexpress/favoritos.png',
             ],
             period: 'Abril 2024 - Septiembre 2024',
+            status: 'completed' as const,
             technologies: [
                 'Laravel 10',
                 'MySQL',
@@ -60,6 +61,7 @@ const Projects = () => {
                 '/images/tintoreria/tpv.png',
             ],
             period: 'Febrero 2024 - Presente',
+            status: 'in-progress' as const,
             technologies: [
                 'Electron',
                 'Node.js',

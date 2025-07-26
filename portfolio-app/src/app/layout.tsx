@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: 'Miguel Vega Molina | Portfolio',
     description:
-        'Ingeniero informático en Sistemas de Información con experiencia en desarrollo de aplicaciones web.',
+        'Ingeniero informático en Sistemas de Información con experiencia en desarrollo de aplicaciones web. Backend e integración con WSO2',
     keywords:
-        'Miguel Vega, desarrollador web, ingeniero informático, portfolio, NTT Data, Django, Laravel, WSO2',
+        'Miguel Vega,  ingeniero informático en sistemas de información, portfolio, NTT Data, Django, Laravel, WSO2',
     icons: {
         icon: [{ url: '/favicon.ico', type: 'image/x-icon', sizes: 'any' }],
         shortcut: '/favicon.ico',

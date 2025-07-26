@@ -24,6 +24,7 @@ interface ProjectProps {
         futureFeatures?: string[];
         githubUrl?: string;
         liveUrl?: string;
+        status?: 'completed' | 'in-progress' | 'planned';
     };
     index: number;
 }
@@ -35,6 +36,29 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
 
     const images = project.images || [project.image];
     const hasMultipleImages = images.length > 1;
+
+    // Función para obtener el estilo del badge de estado
+    const getStatusBadge = (status?: string) => {
+        switch (status) {
+            case 'completed':
+                return {
+                    text: 'Terminado',
+                    className: 'bg-green-500/20 text-green-400 border border-green-500/30'
+                };
+            case 'in-progress':
+                return {
+                    text: 'En proceso',
+                    className: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                };
+            case 'planned':
+                return {
+                    text: 'Planificado',
+                    className: 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                };
+            default:
+                return null;
+        }
+    };
 
     const nextImage = () => {
         setCurrentImageIndex(prev => (prev + 1) % images.length);
@@ -147,7 +171,14 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                 <div className='p-6'>
                     <div className='flex items-center justify-between mb-3'>
                         <h3 className='text-xl font-bold'>{project.title}</h3>
-                        <div className='flex items-center gap-2'>
+                        <div className='flex items-center gap-3'>
+                            {/* Badge de estado */}
+                            {project.status && getStatusBadge(project.status) && (
+                                <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusBadge(project.status)?.className}`}>
+                                    {getStatusBadge(project.status)?.text}
+                                </span>
+                            )}
+                            
                             {project.githubUrl && (
                                 <a
                                     href={project.githubUrl}
@@ -230,9 +261,19 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                             <div className='p-6 overflow-y-auto max-h-[90vh]'>
                                 {/* Header del proyecto */}
                                 <div className='mb-6'>
-                                    <h2 className='text-3xl font-bold mb-2'>
-                                        {project.title}
-                                    </h2>
+                                    <div className='flex items-start justify-between mb-4'>
+                                        <div>
+                                            <h2 className='text-3xl font-bold mb-2'>
+                                                {project.title}
+                                            </h2>
+                                            {/* Badge de estado en el modal */}
+                                            {project.status && getStatusBadge(project.status) && (
+                                                <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-3 ${getStatusBadge(project.status)?.className}`}>
+                                                    {getStatusBadge(project.status)?.text}
+                                                </span>
+                                            )}
+                                        </div>
+                                    </div>
                                     <div className='flex items-center gap-4 mb-4'>
                                         <div className='flex items-center gap-2 text-primary'>
                                             <FiClock />

@@ -272,20 +272,12 @@ const Hero = () => {
                         transition={{ duration: 0.5 }}
                         className='md:col-span-3'
                     >
-                        <div className='mb-6'>
-                            <motion.h2
-                                initial={{ opacity: 0, y: -20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2, duration: 0.5 }}
-                                className='text-primary font-medium mb-2'
-                            >
-                                Desarrollador Web
-                            </motion.h2>
+                        <div className='mb-3'>
                             <motion.h1
                                 initial={{ opacity: 0, y: -20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4, duration: 0.5 }}
-                                className='text-4xl md:text-6xl font-bold mb-4'
+                                className='text-4xl md:text-6xl font-bold mb-2'
                             >
                                 Miguel Vega Molina
                             </motion.h1>

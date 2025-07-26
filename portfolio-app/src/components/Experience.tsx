@@ -22,7 +22,8 @@ const Experience = () => {
             location: 'Dos Hermanas, Sevilla',
             period: 'Abril 2024 - Octubre 2024',
             description: [
-                'Integraciones WSO2, automatizaciones de procesos Django (Jiras Internos, horas cliente).',
+                'Integraciones de backend con WSO2(API Restful & SOAP & Dataservice)',
+                'Automatizaciones de procesos internos con Django (Jira Internos, horas de cliente)',
                 'Colaboré en la implementación de alertas y monitoreo con Elastic Search.',
             ],
         },

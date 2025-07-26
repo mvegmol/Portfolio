@@ -40,11 +40,13 @@ const About = () => {
                                 <div className='absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-primary'></div>
                             </div>
                             <p className='text-lg mb-6 text-gray-300'>
-                                Soy un Ingeniero informático en Sistemas de
-                                Información con experiencia en desarrollo de
-                                aplicaciones web y un enfoque particular en
-                                tecnologías como Laravel, Node.js, Django, WSO2
-                                y Elastic Search.
+                                Soy Ingeniero en Informática en Sistemas de
+                                Información, con experiencia en el desarrollo de
+                                aplicaciones web y un enfoque especial en
+                                tecnologías como Laravel, Node.js, Django y
+                                Elastic Search. Además, cuento con experiencia
+                                en integración de backend mediante WSO2, así
+                                como en el diseño y construcción de APIs
                             </p>
                             <p className='text-lg mb-6 text-gray-300'>
                                 Mi objetivo profesional está enfocado en crear
