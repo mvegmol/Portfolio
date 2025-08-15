@@ -63,6 +63,14 @@ const Skills = () => {
             title: 'Frameworks & Librerías',
             skills: [
                 {
+                    name: 'WSO2 Micro Integrator(SOAP & REST)',
+                    icon: <TbServer size={40} className='text-primary-light' />,
+                },
+                {
+                    name: 'KeyCloak',
+                    icon: <MdSecurity size={40} className='text-red-500' />,
+                },
+                {
                     name: 'Laravel',
                     icon: <SiLaravel size={40} className='text-[#FF2D20]' />,
                 },
@@ -104,6 +112,10 @@ const Skills = () => {
                     icon: <SiMysql size={40} className='text-[#4479A1]' />,
                 },
                 {
+                    name: 'SQLite',
+                    icon: <SiSqlite size={40} className='text-[#003B57]' />,
+                },
+                {
                     name: 'SQLAlchemy',
                     icon: <TbDatabase size={40} className='text-[#D71F00]' />,
                 },
@@ -111,10 +123,7 @@ const Skills = () => {
                     name: 'Sequelize',
                     icon: <SiSequelize size={40} className='text-[#52B0E7]' />,
                 },
-                {
-                    name: 'SQLite',
-                    icon: <SiSqlite size={40} className='text-[#003B57]' />,
-                },
+                
             ],
         },
         {
@@ -142,48 +151,7 @@ const Skills = () => {
                 },
             ],
         },
-        {
-            title: 'APIs & Testing',
-            skills: [
-                {
-                    name: 'RESTful APIs',
-                    icon: <TbApi size={40} className='text-[#FF6B6B]' />,
-                },
-                {
-                    name: 'Pydantic',
-                    icon: <SiPydantic size={40} className='text-[#E92063]' />,
-                },
-                {
-                    name: 'PyTest',
-                    icon: <SiPytest size={40} className='text-[#0A9EDC]' />,
-                },
-                {
-                    name: 'JWT Auth',
-                    icon: <MdSecurity size={40} className='text-[#000000]' />,
-                },
-                {
-                    name: 'Swagger/OpenAPI',
-                    icon: <TbApi size={40} className='text-[#85EA2D]' />,
-                },
-            ],
-        },
-        {
-            title: 'Herramientas & Otros',
-            skills: [
-                {
-                    name: 'WSO2',
-                    icon: <TbServer size={40} className='text-primary-light' />,
-                },
-                {
-                    name: 'KeyCloak',
-                    icon: <MdSecurity size={40} className='text-red-500' />,
-                },
-                {
-                    name: 'GitHub',
-                    icon: <SiGithub size={40} className='text-white' />,
-                },
-            ],
-        },
+    
     ];
 
     return (
