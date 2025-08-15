@@ -235,7 +235,7 @@ const About = () => {
                                         </p>
                                         <p className='font-medium'>
                                             Español (Nativo), Inglés
-                                            (Intermedio)
+                                            (B1)
                                         </p>
                                     </div>
                                 </motion.div>
