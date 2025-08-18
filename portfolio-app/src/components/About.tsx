@@ -41,26 +41,30 @@ const About = () => {
                             </div>
                             <p className='text-lg mb-6 text-gray-300'>
                                 Soy Ingeniero en Informática en Sistemas de
-                                Información, con experiencia en el desarrollo de
-                                aplicaciones web y un enfoque especial en
-                                tecnologías como Laravel, Node.js, Django y
-                                Elastic Search. Además, cuento con experiencia
-                                en integración de backend mediante WSO2, así
-                                como en el diseño y construcción de APIs
+                                Información, especializado en desarrollo backend
+                                con amplia experiencia en tecnologías como
+                                Laravel, Node.js, Django y Elastic Search.
+                                Actualmente trabajo en interoperabilidad entre
+                                sistemas, con experiencia en integración de
+                                backend mediante WSO2, así como en el diseño y
+                                construcción de APIs robustas.
                             </p>
                             <p className='text-lg mb-6 text-gray-300'>
-                                Mi objetivo profesional está enfocado en crear
-                                soluciones escalables, optimizar procesos
-                                críticos y garantizar la alta disponibilidad de
-                                servicios esenciales para el negocio.
+                                Mi enfoque está centrado en la arquitectura de
+                                servicios backend escalables, optimización de
+                                procesos críticos y garantizar la alta
+                                disponibilidad de servicios esenciales. Me
+                                especializo en crear soluciones que permitan la
+                                comunicación eficiente entre diferentes sistemas
+                                y plataformas.
                             </p>
                             <p className='text-lg text-gray-300'>
                                 Me caracterizo por ser proactivo, con alta
                                 capacidad de adaptación y orientado al trabajo
                                 en entornos ágiles. Estoy constantemente
                                 motivado por seguir creciendo profesionalmente
-                                en proyectos de innovación tecnológica que
-                                supongan nuevos retos.
+                                en proyectos de innovación tecnológica backend e
+                                interoperabilidad que supongan nuevos retos.
                             </p>
 
                             <motion.div
