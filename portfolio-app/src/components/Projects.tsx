@@ -104,7 +104,64 @@ const Projects = () => {
             ],
             // githubUrl: 'https://github.com/mvegmol/Tintoreria',
         },
-        // You can add more projects here
+        {
+            title: 'Habit Challenge API',
+            description:
+                'API RESTful para la gestión de hábitos y seguimiento de progreso, desplegada en Render (FastAPI) con base de datos PostgreSQL alojada en Railway. Esta arquitectura cloud-native proporciona una solución escalable y gratuita para la gestión de hábitos personales, incluyendo autenticación, seguimiento de progreso y análisis estadístico.',
+            image: '/images/habit-challenge-api/overview.png', // Cambia la ruta si tienes otra imagen
+            images: [
+                '/images/habit-challenge-api/overview.png',
+                '/images/habit-challenge-api/model.png',
+                '/images/habit-challenge-api/arquitectura.png',
+               
+            ],
+            period: 'Agosto 2025',
+            status: 'completed' as const,
+            technologies: [
+                'FastAPI',
+                'SQLAlchemy',
+                'PostgreSQL',
+                'Railway',
+                'Render',
+                'Docker',
+                'PyJWT',
+                'Alembic',
+                'Pydantic',
+            ],
+            features: [
+                'Arquitectura en Capas (Layered Architecture) + Clean Architecture',
+                'Capa de Presentación: Routers con FastAPI y validación Pydantic',
+                'Capa de Lógica de Negocio: CRUD operations y validaciones específicas',
+                'Capa de Acceso a Datos: SQLAlchemy ORM con mapeo objeto-relacional',
+                'Capa de Persistencia: PostgreSQL con gestión optimizada de conexiones',
+                'Patrones de diseño: Repository, DTO, Dependency Injection',
+                'Elementos de Arquitectura Hexagonal con adaptadores externos',
+                'Registro y autenticación de usuarios con JWT tokens',
+                'Gestión de hábitos personalizados con seguimiento detallado',
+                'Sistema de progreso diario con cálculos automáticos',
+                'Endpoints protegidos con middleware de seguridad',
+                'Consultas estadísticas y reportes de avance personalizados',
+                'Integración con servicios externos (OpenWeather API)',
+                'Documentación interactiva completa con Swagger/OpenAPI',
+                'Despliegue cloud-native en Render y Railway',
+                'Base de datos PostgreSQL alojada gratuitamente en Railway',
+                'Separación clara de responsabilidades por capas',
+                'Estructura escalable y mantenible',
+                'Pruebas automatizadas con pytest',
+            ],
+            futureFeatures: [
+                'Notificaciones push y recordatorios',
+                'Integración con apps móviles',
+                'Gamificación y recompensas',
+                'Panel de administración web',
+                'Exportación de datos a CSV/Excel',
+                'Soporte multi-idioma',
+                'Integración con servicios de salud y fitness',
+            ],
+            githubUrl: 'https://github.com/mvegmol/habit-challenge-api',
+            liveUrl: 'https://habit-challenge-api.onrender.com', // Si tienes una URL pública, agrégala aquí
+        },
+        
     ];
 
     return (

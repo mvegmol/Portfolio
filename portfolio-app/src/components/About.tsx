@@ -40,7 +40,7 @@ const About = () => {
                                 <div className='absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-primary'></div>
                             </div>
                             <p className='text-lg mb-6 text-gray-300'>
-                                Ingeniero en Sistemas de Información
+                                Ingeniero Junior en Sistemas de Información
                                 especializado en integración de servicios y
                                 desarrollo de soluciones tecnológicas.
                                 Actualmente trabajo con{' '}
@@ -242,7 +242,7 @@ const About = () => {
                                         </p>
                                         <p className='font-medium'>
                                             Español (Nativo), Inglés
-                                            (Intermedio)
+                                            (B1)
                                         </p>
                                     </div>
                                 </motion.div>

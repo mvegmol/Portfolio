@@ -93,7 +93,8 @@ const Contact = () => {
                                 <p className='text-lg mb-4 text-gray-300'>
                                     Estoy interesado en oportunidades
                                     profesionales, especialmente en proyectos
-                                    ambiciosos e innovadores. Si tienes alguna
+                                    backend ambiciosos e innovadores de
+                                    interoperabilidad. Si tienes alguna
                                     pregunta o propuesta, no dudes en
                                     contactarme utilizando el formulario.
                                 </p>
@@ -114,11 +115,11 @@ const Contact = () => {
                                             abierto a nuevas oportunidades
                                         </span>
                                         , ya sea en empresas o como freelance.
-                                        Me especializo en el desarrollo de
-                                        aplicaciones web personalizadas,
-                                        optimización de sistemas existentes y
-                                        soluciones integrales para proyectos de
-                                        pequeña escala.
+                                        Me especializo en desarrollo backend,
+                                        interoperabilidad entre sistemas,
+                                        desarrollo de APIs y
+                                        soluciones integrales de integración para
+                                        proyectos escalables.
                                     </p>
                                 </motion.div>
 
