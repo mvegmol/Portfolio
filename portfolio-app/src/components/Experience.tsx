@@ -1,13 +1,27 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar } from 'react-icons/fi';
+import { FiBriefcase, FiCalendar, FiAward } from 'react-icons/fi';
+import Image from 'next/image';
 
 const Experience = () => {
     const experiences = [
         {
             title: 'Ingeniero Junior',
+            company: 'NTT Data — Agencia Digital de Andalucía',
+            location: 'Córdoba',
+            period: 'Febrero 2026 - Presente',
+            description: [
+                'Integración de servicios WSO2 con sistemas de la Junta de Andalucía y Ministerios, garantizando la interoperabilidad entre plataformas.',
+                'Análisis funcional y técnico de servicios web (REST/SOAP) para su correcta integración en el ecosistema de la Agencia Digital.',
+                'Configuración y despliegue de APIs, proxies y secuencias en WSO2 API Manager y Micro Integrator.',
+                'Colaboración con equipos multidisciplinares para la definición de requisitos y validación de integraciones.',
+                'Documentación técnica de integraciones y procesos siguiendo los estándares de calidad de la organización.',
+            ],
+        },
+        {
+            title: 'Ingeniero Junior',
             company: 'NTT Data',
             location: 'Córdoba',
-            period: 'Enero 2025 - Presente',
+            period: 'Enero 2025 - Enero 2026',
             description: [
                 'Diseño y desarrollo de aplicaciones web en Django para proyectos de la Junta de Andalucía.',
                 'Automatización de procesos internos, incluyendo sistemas de alertas para monitorización de servicios críticos y detección de caídas.',
@@ -154,6 +168,49 @@ const Experience = () => {
                             <p className='text-lg text-gray-300'>
                                 Ingeniero Informático en Sistemas de Información
                             </p>
+                        </div>
+
+                        {/* Certifications */}
+                        <h3 className='text-2xl font-bold mt-12 mb-6'>Certificaciones</h3>
+                        <div className='flex flex-col sm:flex-row gap-6'>
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true, margin: '-100px' }}
+                                transition={{ duration: 0.4 }}
+                                className='group relative bg-gradient-to-br from-[#242424] to-[#1a1a1a] rounded-xl p-1 w-full sm:max-w-md'
+                            >
+                                <div className='absolute inset-0 rounded-xl bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+                                <div className='relative bg-[#1e1e1e] rounded-[10px] overflow-hidden'>
+                                    <a
+                                        href='/images/certificacion/certificacion.png'
+                                        target='_blank'
+                                        rel='noopener noreferrer'
+                                        className='block relative w-full h-64 bg-[#2a2a2a] cursor-zoom-in'
+                                    >
+                                        <Image
+                                            src='/images/certificacion/certificacion.png'
+                                            alt='WSO2 Certified Micro Integrator Developer - V4'
+                                            fill
+                                            className='object-contain p-4 transition-transform duration-300 group-hover:scale-105'
+                                        />
+                                    </a>
+                                    <div className='px-5 py-4'>
+                                        <div className='flex items-start gap-3'>
+                                            <FiAward className='text-primary mt-1 flex-shrink-0' size={22} />
+                                            <div>
+                                                <h4 className='font-bold text-white leading-tight'>
+                                                    WSO2 Certified Micro Integrator Developer - V4
+                                                </h4>
+                                                <p className='text-gray-400 text-sm mt-1'>WSO2</p>
+                                                <p className='text-gray-500 text-xs mt-1 font-mono'>
+                                                    Certification ID: CID-05301118
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
                         </div>
                     </motion.div>
                 </motion.div>

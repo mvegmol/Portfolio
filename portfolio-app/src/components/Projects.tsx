@@ -60,8 +60,8 @@ const Projects = () => {
                 '/images/tintoreria/prendas.png',
                 '/images/tintoreria/tpv.png',
             ],
-            period: 'Febrero 2024 - Presente',
-            status: 'in-progress' as const,
+            period: 'Febrero 2025 - Junio 2025',
+            status: 'completed' as const,
             technologies: [
                 'Electron',
                 'Node.js',

@@ -33,34 +33,41 @@ const About = () => {
                             <div className='mb-6 relative max-w-xs mx-auto md:mx-0'>
                                 <div className='absolute -top-3 -left-3 w-24 h-24 border-t-2 border-l-2 border-primary'></div>
                                 <img
-                                    src='/images/foto.png'
+                                    src='/images/2.png'
                                     alt='Miguel Vega Molina'
                                     className='w-full rounded-lg shadow-lg'
                                 />
                                 <div className='absolute -bottom-3 -right-3 w-24 h-24 border-b-2 border-r-2 border-primary'></div>
                             </div>
                             <p className='text-lg mb-6 text-gray-300'>
-                                Soy Ingeniero en Informática en Sistemas de
-                                Información, con experiencia en el desarrollo de
-                                aplicaciones web y un enfoque especial en
-                                tecnologías como Laravel, Node.js, Django y
-                                Elastic Search. Además, cuento con experiencia
-                                en integración de backend mediante WSO2, así
-                                como en el diseño y construcción de APIs
+                                Ingeniero en Sistemas de Información
+                                especializado en integración de servicios y
+                                desarrollo de soluciones tecnológicas.
+                                Actualmente trabajo con{' '}
+                                <span className='text-primary font-medium'>WSO2</span>,{' '}
+                                <span className='text-primary font-medium'>API Manager</span>,{' '}
+                                <span className='text-primary font-medium'>Django</span>,{' '}
+                                <span className='text-primary font-medium'>Laravel</span> y{' '}
+                                <span className='text-primary font-medium'>Node.js</span>,
+                                conectando sistemas de la administración pública
+                                y garantizando la interoperabilidad entre
+                                plataformas.
                             </p>
                             <p className='text-lg mb-6 text-gray-300'>
-                                Mi objetivo profesional está enfocado en crear
-                                soluciones escalables, optimizar procesos
-                                críticos y garantizar la alta disponibilidad de
-                                servicios esenciales para el negocio.
+                                Desarrollo soluciones escalables, optimizo
+                                procesos críticos y aseguro la alta
+                                disponibilidad de servicios esenciales para el
+                                negocio. Mi experiencia abarca desde el diseño
+                                y construcción de APIs hasta la integración
+                                completa de servicios REST y SOAP en entornos
+                                empresariales.
                             </p>
                             <p className='text-lg text-gray-300'>
-                                Me caracterizo por ser proactivo, con alta
-                                capacidad de adaptación y orientado al trabajo
-                                en entornos ágiles. Estoy constantemente
-                                motivado por seguir creciendo profesionalmente
-                                en proyectos de innovación tecnológica que
-                                supongan nuevos retos.
+                                Proactivo y orientado al trabajo en entornos
+                                ágiles, con alta capacidad de adaptación.
+                                Constantemente motivado por seguir creciendo
+                                profesionalmente en proyectos de innovación
+                                tecnológica que supongan nuevos retos.
                             </p>
 
                             <motion.div

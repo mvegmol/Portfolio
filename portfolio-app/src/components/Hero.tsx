@@ -9,6 +9,7 @@ import {
     FiArrowDown,
 } from 'react-icons/fi';
 import { SiLaravel, SiNodedotjs, SiDjango } from 'react-icons/si';
+import { TbServer } from 'react-icons/tb';
 
 const Hero = () => {
     return (
@@ -295,10 +296,11 @@ const Hero = () => {
                             transition={{ delay: 0.8, duration: 0.5 }}
                             className='text-lg mb-8 max-w-lg text-gray-300'
                         >
-                            Ingeniero en Sistemas de Información especializado
-                            en desarrollo web. Creo soluciones escalables,
-                            optimizo procesos críticos y aseguro alta
-                            disponibilidad de servicios para el negocio.
+                            Ingeniero en Sistemas de Información
+                            especializado en integración de servicios y
+                            desarrollo de soluciones tecnológicas. Conecto
+                            sistemas, optimizo procesos críticos y aseguro
+                            alta disponibilidad de servicios para el negocio.
                             Proactivo y orientado al trabajo en entornos ágiles.
                         </motion.p>
 
@@ -309,16 +311,20 @@ const Hero = () => {
                             className='flex flex-wrap gap-4 mb-8'
                         >
                             <div className='flex items-center gap-2 bg-[#242424] px-3 py-2 rounded-full'>
+                                <TbServer className='text-[#FF7300]' />
+                                <span className='text-sm'>WSO2</span>
+                            </div>
+                            <div className='flex items-center gap-2 bg-[#242424] px-3 py-2 rounded-full'>
+                                <SiDjango className='text-[#092E20]' />
+                                <span className='text-sm'>Django</span>
+                            </div>
+                            <div className='flex items-center gap-2 bg-[#242424] px-3 py-2 rounded-full'>
                                 <SiLaravel className='text-[#FF2D20]' />
                                 <span className='text-sm'>Laravel</span>
                             </div>
                             <div className='flex items-center gap-2 bg-[#242424] px-3 py-2 rounded-full'>
                                 <SiNodedotjs className='text-[#339933]' />
                                 <span className='text-sm'>Node.js</span>
-                            </div>
-                            <div className='flex items-center gap-2 bg-[#242424] px-3 py-2 rounded-full'>
-                                <SiDjango className='text-[#092E20]' />
-                                <span className='text-sm'>Django</span>
                             </div>
                         </motion.div>
 
@@ -336,7 +342,7 @@ const Hero = () => {
                                 <FiArrowDown className='ml-1' />
                             </a>
                             <a
-                                href='/CV.pdf'
+                                href='/CVnew.pdf'
                                 className='border border-primary text-primary hover:bg-primary/10 py-3 px-8 rounded-md transition-all flex items-center gap-2 font-medium'
                                 target='_blank'
                                 rel='noopener noreferrer'
@@ -380,7 +386,7 @@ const Hero = () => {
                             <div className='aspect-square bg-gradient-to-br from-primary/30 to-primary rounded-full p-1'>
                                 <div className='aspect-square bg-[#1a1a1a] rounded-full overflow-hidden flex items-center justify-center'>
                                     <img
-                                        src='/images/foto.png'
+                                        src='/images/foto.jpg'
                                         alt='Miguel Vega Molina'
                                         className='w-full h-full object-cover'
                                     />
