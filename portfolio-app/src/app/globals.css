@@ -3,18 +3,20 @@
 :root {
     --background: #121212;
     --foreground: #e0e0e0;
-    --primary: #4f46e5;
+    --primary: #80e4ca;
     --primary-dark: #4338ca;
-    --primary-light: #6366f1;
+    --primary-light: #a2efdc;
     --primary-lighter: #818cf8;
     --secondary: #9ca3af;
 }
 
 @theme inline {
+    --color-primary: var(--primary);
+    --color-primary-light: var(--primary-light);
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --font-sans: Arial, Helvetica, sans-serif;
+    --font-mono: Consolas, monospace;
 }
 
 html {
@@ -81,3 +83,20 @@ body {
     border-radius: 4px;
     transition: width 1s ease-in-out;
 }
+
+.container { max-width: 1152px; }
+.hero-section { padding: 160px 0 90px; background: radial-gradient(ellipse at 85% 20%, #17362e 0, #121212 52%); }
+.hero-aside { padding: 24px; background: #ffffff04; border: 1px solid #ffffff20; border-radius: 24px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .16em; color: var(--primary); }
+.primary-button, .secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 13px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; }
+.primary-button { background: var(--primary); color: #10231e; }
+.primary-button:hover { background: var(--primary-light); }
+.secondary-button { border: 1px solid #ffffff30; color: #fff; }
+.secondary-button:hover { border-color: var(--primary); }
+.experience-row { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 30px 0; border-top: 1px solid #ffffff20; }
+.skill-tag { background: #ffffff08; color: #cbd5d1; padding: 8px 12px; font-size: 14px; border-radius: 6px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--primary); outline-offset: 5px; }
+.skip-link { position: fixed; z-index: 100; left: 12px; top: -100px; padding: 12px; background: var(--primary); color: #121212; }
+.skip-link:focus { top: 12px; }
+@media(max-width: 767px) { .hero-section { padding-top: 130px; } .experience-row { grid-template-columns: 1fr; gap: 20px; } }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

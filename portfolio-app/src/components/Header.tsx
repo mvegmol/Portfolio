@@ -39,7 +39,7 @@ const Header = () => {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className='hidden md:flex space-x-8'>
+                    <nav className='hidden lg:flex space-x-6'>
                         <Link
                             href='#about'
                             className='text-gray-300 hover:text-primary transition-colors'
@@ -51,6 +51,12 @@ const Header = () => {
                             className='text-gray-300 hover:text-primary transition-colors'
                         >
                             Experiencia
+                        </Link>
+                        <Link
+                            href='#certifications'
+                            className='text-gray-300 hover:text-primary transition-colors'
+                        >
+                            Certificaciones
                         </Link>
                         <Link
                             href='#projects'
@@ -74,8 +80,10 @@ const Header = () => {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className='md:hidden text-2xl focus:outline-none'
+                        className='lg:hidden text-2xl focus:outline-none'
                         onClick={toggleMenu}
+                        aria-expanded={isMenuOpen}
+                        aria-controls='mobile-navigation'
                         aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
                     >
                         {isMenuOpen ? <FiX /> : <FiMenu />}

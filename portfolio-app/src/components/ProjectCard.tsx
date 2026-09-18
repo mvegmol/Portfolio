@@ -5,8 +5,6 @@ import {
     FiExternalLink,
     FiGithub,
     FiClock,
-    FiChevronDown,
-    FiChevronUp,
     FiChevronLeft,
     FiChevronRight,
     FiX,
@@ -105,6 +103,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                         currentImageIndex + 1
                                     }`}
                                     fill
+                                    sizes='(min-width: 768px) 50vw, 100vw'
                                     style={{ objectFit: 'cover' }}
                                     className='transition-transform duration-300 hover:scale-105 cursor-pointer'
                                     onClick={openImageModal}
@@ -118,6 +117,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                                 e.stopPropagation();
                                                 prevImage();
                                             }}
+                                            aria-label='Imagen anterior'
                                             className='absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10'
                                         >
                                             <FiChevronLeft />
@@ -127,6 +127,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                                 e.stopPropagation();
                                                 nextImage();
                                             }}
+                                            aria-label='Imagen siguiente'
                                             className='absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70 z-10'
                                         >
                                             <FiChevronRight />
@@ -137,6 +138,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                             {images.map((_, idx) => (
                                                 <button
                                                     key={idx}
+                                                    aria-label={`Ver imagen ${idx + 1}`}
                                                     onClick={e => {
                                                         e.stopPropagation();
                                                         setCurrentImageIndex(
@@ -252,6 +254,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                             {/* Botón cerrar */}
                             <button
                                 onClick={closeDetailsModal}
+                                aria-label='Cerrar detalles del proyecto'
                                 className='absolute top-4 right-4 z-10 bg-black/70 text-white p-3 rounded-full hover:bg-black/90 transition-colors shadow-lg'
                             >
                                 <FiX size={20} />
@@ -428,6 +431,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                             {/* Botón cerrar */}
                             <button
                                 onClick={closeImageModal}
+                                aria-label='Cerrar imagen'
                                 className='absolute top-4 right-4 z-10 bg-black/70 text-white p-3 rounded-full hover:bg-black/90 transition-colors shadow-lg'
                             >
                                 <FiX size={20} />
@@ -473,6 +477,7 @@ const ProjectCard = ({ project, index }: ProjectProps) => {
                                             {images.map((_, idx) => (
                                                 <button
                                                     key={idx}
+                                                    aria-label={`Ver imagen ${idx + 1}`}
                                                     onClick={e => {
                                                         e.stopPropagation();
                                                         setCurrentImageIndex(

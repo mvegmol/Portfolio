@@ -10,6 +10,7 @@ const MobileMenu = ({ isOpen, toggle }: MobileMenuProps) => {
     const menuItems = [
         { href: '#about', label: 'Sobre mí' },
         { href: '#experience', label: 'Experiencia' },
+        { href: '#certifications', label: 'Certificaciones' },
         { href: '#projects', label: 'Proyectos' },
         { href: '#skills', label: 'Habilidades' },
         { href: '#contact', label: 'Contacto' },
@@ -23,9 +24,9 @@ const MobileMenu = ({ isOpen, toggle }: MobileMenuProps) => {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className='md:hidden bg-[#1a1a1a] shadow-lg absolute top-full left-0 w-full border-t border-gray-800'
+                    className='lg:hidden bg-[#1a1a1a] shadow-lg absolute top-full left-0 w-full border-t border-gray-800'
                 >
-                    <nav className='flex flex-col py-4'>
+                    <nav id='mobile-navigation' className='flex flex-col py-4'>
                         {menuItems.map((item, index) => (
                             <Link
                                 key={index}

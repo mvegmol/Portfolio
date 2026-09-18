@@ -1,5 +1,6 @@
 'use client';
 
+import Certifications from '../components/Certifications';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
@@ -12,13 +13,17 @@ import Footer from '../components/Footer';
 export default function Home() {
     return (
         <div className='min-h-screen font-sans'>
+            <a href="#main-content" className="skip-link">Saltar al contenido</a>
             <Header />
+            <main id="main-content">
             <Hero />
             <About />
             <Experience />
-            <Projects />
+            <Certifications />
             <Skills />
+            <Projects />
             <Contact />
+            </main>
             <Footer />
         </div>
     );
